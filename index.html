@@ -7,220 +7,15 @@
 <meta name="description" content="Service de découpe laser spécialisé pour Nomex 410, Hitex, Néoprène et Silicone. Tolérances jusqu'à ±10 μm. Livraison prototypes en 48 h. Montréal, Québec.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
-<style>
-
-/* ── HOME HERO ──────────────────────────────────────────── */
-.hero {
-  padding: 120px 64px 80px;
-  background-color: var(--black);
-  background-image:
-    linear-gradient(to right, rgba(17,24,20,0.96) 40%, rgba(17,24,20,0.60) 100%),
-    url('https://images.unsplash.com/photo-1565608438257-ab926e43875d?w=1600&q=80');
-  background-size: cover; background-position: center;
-  display: flex; flex-direction: column; justify-content: center;
-  position: relative; overflow: hidden;
-  min-height: 580px;
-}
-.hero::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-  width: 4px; background: var(--green); z-index: 1;
-}
-.hero-label {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(255,255,255,0.07); border-radius: 100px;
-  padding: 7px 16px; margin-bottom: 36px; width: fit-content;
-}
-.hero-label .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-lt); flex-shrink: 0; }
-.hero-label span { font-size: 11px; letter-spacing: 0.5px; color: rgba(255,255,255,0.45); }
-.hero h1 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(38px, 6vw, 82px);
-  font-weight: 800; line-height: 0.95;
-  color: var(--white); letter-spacing: -3px;
-  max-width: 820px; margin-bottom: 40px;
-}
-.hero h1 .accent { color: var(--green-lt); }
-.hero-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
-.hero-sub { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.75; max-width: 440px; font-weight: 300; }
-.hero-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
-.btn-secondary-hero { font-size: 12px; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 8px; white-space: nowrap; transition: color .2s; }
-.btn-secondary-hero:hover { color: rgba(255,255,255,0.7); }
-.btn-secondary-hero::after { content: '↓'; }
-
-/* Hero animations */
-.hero-label  { opacity: 0; animation: heroFadeUp 0.65s 0.1s  cubic-bezier(0.16,1,0.3,1) forwards; }
-.hero h1     { opacity: 0; animation: heroFadeUp 0.7s  0.25s cubic-bezier(0.16,1,0.3,1) forwards; }
-.hero-bottom { opacity: 0; animation: heroFadeUp 0.7s  0.42s cubic-bezier(0.16,1,0.3,1) forwards; }
-@keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: none; }
-}
-
-/* ── MATERIALS SECTION ──────────────────────────────────── */
-.materials { padding: 100px 64px; background: var(--white); }
-.section-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 56px; }
-.section-header-right { font-size: 14px; color: var(--muted); max-width: 340px; line-height: 1.7; font-weight: 300; }
-.materials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.mat-card {
-  background: var(--off-white); border: 1px solid var(--border);
-  border-radius: 8px; padding: 32px 24px 36px;
-  display: flex; flex-direction: column;
-  transition: transform .2s, box-shadow .2s;
-  position: relative; overflow: hidden;
-}
-.mat-card::after {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-  width: 3px; background: var(--green); opacity: 0;
-  transition: opacity .2s;
-}
-.mat-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(17,24,20,0.1); }
-.mat-card:hover::after { opacity: 1; }
-.mat-card.featured { background: var(--black); border-color: var(--black); }
-.mat-card.featured::after { background: var(--green-lt); opacity: 1; }
-.mat-card.featured .mat-name,
-.mat-card.featured .mat-desc { color: var(--white); }
-.mat-card.featured .mat-spec { color: rgba(255,255,255,0.45); }
-.mat-card.featured .mat-spec::before { background: var(--green-lt); }
-.mat-card.featured .mat-divider { border-color: rgba(255,255,255,0.1); }
-.mat-card.featured .btn-mat { background: var(--indigo); color: var(--white); border-color: var(--indigo); }
-.mat-card.featured .btn-mat:hover { background: var(--indigo-dk); }
-.mat-card.featured .mat-badge { color: rgba(255,255,255,0.3); }
-.mat-badge {
-  font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--green); margin-bottom: 12px; display: block;
-}
-.mat-name {
-  font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700;
-  color: var(--black); letter-spacing: -0.3px; line-height: 1.15; margin-bottom: 6px;
-}
-.mat-subtitle {
-  font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--grey-lt); margin-bottom: 16px; font-weight: 400;
-}
-.mat-card.featured .mat-subtitle { color: rgba(255,255,255,0.3); }
-.mat-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-.mat-desc { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 16px; flex: 1; }
-.mat-specs { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
-.mat-spec {
-  font-size: 12px; color: var(--muted); line-height: 1.5;
-  display: flex; align-items: flex-start; gap: 10px; font-weight: 300;
-}
-.mat-spec::before {
-  content: ''; display: inline-block; width: 5px; height: 5px;
-  background: var(--green); border-radius: 50%; flex-shrink: 0; margin-top: 5px;
-}
-.btn-mat {
-  display: block; text-align: center; font-family: 'Syne', sans-serif;
-  font-size: 12px; font-weight: 600; padding: 13px 20px;
-  border-radius: 100px; border: 1.5px solid var(--black);
-  color: var(--black); transition: background .2s, color .2s;
-}
-.btn-mat:hover { background: var(--black); color: var(--white); }
-
-/* ── WHY P&P ────────────────────────────────────────────── */
-.why { padding: 100px 64px; background: var(--off-white); }
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 56px; }
-.why-item { display: flex; flex-direction: column; gap: 16px; }
-.why-icon {
-  width: 48px; height: 48px; border-radius: 10px;
-  background: var(--green); display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.why-icon svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.why-title {
-  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
-  color: var(--black); letter-spacing: -0.3px;
-}
-.why-desc { font-size: 14px; color: var(--muted); line-height: 1.75; font-weight: 300; }
-.why-stat { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 800; color: var(--green); letter-spacing: -1px; line-height: 1; }
-.why-stat-label { font-size: 11px; letter-spacing: 0.5px; color: var(--grey-lt); text-transform: uppercase; margin-top: 4px; }
-
-/* ── PROCESS STRIP ──────────────────────────────────────── */
-.process { padding: 80px 64px; background: var(--light); }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; }
-.process-step {
-  padding: 32px 28px; border-left: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 12px;
-}
-.process-step:first-child { border-left: none; padding-left: 0; }
-.step-num {
-  font-family: 'Inter', sans-serif; font-size: 32px; font-weight: 800;
-  color: var(--border); letter-spacing: -2px; line-height: 1;
-}
-.step-title {
-  font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700;
-  color: var(--black); letter-spacing: -0.2px;
-}
-.step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; }
-
-/* ── FORMATS ACCEPTED ───────────────────────────────────── */
-.formats {
-  padding: 72px 64px; background: var(--white);
-  display: flex; align-items: center; gap: 80px;
-}
-.formats-left { flex: 1; }
-.formats-right { flex: 1; }
-.formats-tags { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-.format-tag {
-  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
-  background: var(--off-white); border: 1.5px solid var(--border);
-  border-radius: 8px; padding: 12px 20px; color: var(--black);
-  letter-spacing: 0.5px;
-}
-.format-tag.highlight { background: var(--green); border-color: var(--green); color: var(--white); }
-.formats-rules { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
-.format-rule {
-  display: flex; align-items: flex-start; gap: 12px;
-  font-size: 13px; color: var(--muted); line-height: 1.6; font-weight: 300;
-}
-.format-rule strong { color: var(--black); font-weight: 500; }
-.rule-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--indigo);
-  flex-shrink: 0; margin-top: 6px;
-}
-
-/* ── RESPONSIVE HOME ────────────────────────────────────── */
-@media (max-width: 1024px) {
-  .hero { padding: 100px 32px 64px; }
-  .hero h1 { font-size: clamp(36px, 7vw, 68px); letter-spacing: -2px; }
-  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 28px; }
-  .hero-actions { flex-direction: row; align-items: center; }
-  .materials { padding: 72px 32px; }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 40px; }
-  .materials-grid { grid-template-columns: repeat(2, 1fr); }
-  .why { padding: 72px 32px; }
-  .why-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .process { padding: 64px 32px; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  .process-step:nth-child(3) { border-left: none; padding-left: 0; }
-  .formats { padding: 64px 32px; flex-direction: column; gap: 48px; }
-}
-@media (max-width: 640px) {
-  .hero { padding: 88px 20px 56px; min-height: auto; }
-  .hero h1 { font-size: clamp(32px, 10vw, 50px); letter-spacing: -2px; margin-bottom: 28px; }
-  .hero-sub { font-size: 14px; }
-  .hero-actions { flex-direction: column; align-items: flex-start; width: 100%; }
-  .btn-primary { width: 100%; text-align: center; }
-  .materials { padding: 56px 20px; }
-  .materials-grid { grid-template-columns: 1fr; }
-  .why { padding: 56px 20px; }
-  .why-grid { grid-template-columns: 1fr; gap: 32px; }
-  .process { padding: 56px 20px; }
-  .process-steps { grid-template-columns: 1fr; }
-  .process-step { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 24px; }
-  .process-step:first-child { border-top: none; padding-top: 0; }
-  .formats { padding: 56px 20px; }
-}
-</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="site-nav">
   <a class="nav-logo" href="index.html">
-    <div class="nav-logo-badge"><span>P&P</span></div>
+    <img src="img/rgb_P&PLOGOS.png" alt="P&amp;P Colorismédia logo">
     <div>
       <span class="nav-logo-text">Colorismédia</span>
       <span class="nav-logo-sub">Découpe Laser</span>
@@ -249,11 +44,11 @@
 <section class="hero">
   <div class="hero-label">
     <span class="pill-dot"></span>
-    <span>Découpe laser spécialisée — Montréal, Québec</span>
+    <span>Découpe laser industrielle — Montréal, Québec</span>
   </div>
-  <h1>Précision laser<br>pour l'isolation<br><span class="accent">industrielle.</span></h1>
+  <h1>Découpe laser de précision<br>pour isolants thermiques<br><span class="accent">et pièces critiques.</span></h1>
   <div class="hero-bottom">
-    <p class="hero-sub">Nomex 410, Hitex, Néoprène, Silicone et plus — tolérances jusqu'à ±10 μm, bords nets sans effilochage. Prototypes livrés en 48 h.</p>
+    <p class="hero-sub">Nomex 410, Hitex, Néoprène, Silicone et plus — coupe nette, tolérances serrées et livraisons rapides. Solutions pour prototypes et petites séries.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-primary">Demande de soumission →</a>
       <a href="#materiaux" class="btn-secondary-hero">Voir nos matériaux</a>
@@ -261,25 +56,35 @@
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat-item" data-reveal data-reveal-delay="1">
-    <div class="stat-number">±10 μm</div>
-    <div class="stat-label">Tolérance de coupe</div>
+<!-- WHY P&P -->
+<section class="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Pourquoi P&P</div>
+      <h2 class="why-headline">Services clairs, experts et rapides.</h2>
+    </div>
+    <div class="why-right">
+      <article class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 1 6 6v2a6 6 0 0 1-6 6 6 6 0 0 1-6-6V9a6 6 0 0 1 6-6Zm-7 18v-1a5 5 0 0 1 10 0v1"/></svg>
+        </div>
+        <div>
+          <h3 class="why-card-title">Accès direct au spécialiste</h3>
+          <p class="why-card-copy">Échangez rapidement avec l’expert technique, sans passer par des commerciaux ni des intermédiaires.</p>
+        </div>
+      </article>
+      <article class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </div>
+        <div>
+          <h3 class="why-card-title">Sans frais d'outillage</h3>
+          <p class="why-card-copy">Aucune matrice physique n’est requise, ce qui rend les prototypes et les petites séries plus rapides et moins coûteux.</p>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="stat-item" data-reveal data-reveal-delay="2">
-    <div class="stat-number">48 h</div>
-    <div class="stat-label">Délai prototype</div>
-  </div>
-  <div class="stat-item" data-reveal data-reveal-delay="3">
-    <div class="stat-number">2–30 mil</div>
-    <div class="stat-label">Épaisseurs disponibles</div>
-  </div>
-  <div class="stat-item" data-reveal data-reveal-delay="4">
-    <div class="stat-number">2009</div>
-    <div class="stat-label">En activité depuis</div>
-  </div>
-</div>
+</section>
 
 <!-- MATERIALS -->
 <section class="materials" id="materiaux">
@@ -292,132 +97,60 @@
   </div>
 
   <div class="materials-grid">
-    <!-- Nomex 410 -->
     <div class="mat-card featured" data-reveal data-reveal-delay="1">
+      <div class="mat-card-image" style="background-image:url('img/lasercut-industry.jpeg');"></div>
       <span class="mat-badge">01 — Isolation flexible</span>
       <div class="mat-name">Nomex 410</div>
       <div class="mat-subtitle">Papier aramide DuPont</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Le standard de l'industrie pour l'isolation électrique flexible. Résistance thermique jusqu'à 220 °C (Classe R), rigidité diélectrique de 18 à 40 kV/mm selon l'épaisseur.</p>
+      <div class="mat-desc">L'option la plus fiable pour l'isolation électrique flexible, avec une coupe laser nette et des bords scellés.</div>
       <ul class="mat-specs">
-        <li class="mat-spec">Épaisseurs : 0,05 mm à 0,76 mm (2 à 30 mil)</li>
-        <li class="mat-spec">Tolérances : ±0,1 mm ou mieux</li>
-        <li class="mat-spec">Classe thermique R — 220 °C</li>
-        <li class="mat-spec">Certifié UL 746, conforme RoHS/REACH</li>
-        <li class="mat-spec">Option : adhésif PSA disponible</li>
+        <li class="mat-spec">0,05–0,76 mm</li>
+        <li class="mat-spec">Tolérances serrées</li>
+        <li class="mat-spec">220 °C Classe R</li>
       </ul>
       <a href="nomex.html" class="btn-mat">En savoir plus →</a>
     </div>
 
-    <!-- Hitex -->
     <div class="mat-card" data-reveal data-reveal-delay="2">
+      <div class="mat-card-image" style="background-image:url('img/lasercut-industry.jpeg');"></div>
       <span class="mat-badge">02 — Isolation rigide</span>
       <div class="mat-name">Hitex 020 Gris</div>
-      <div class="mat-subtitle">Isolation thermique rigide</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Utilisé dans les fours, fonderies et presses haute pression. Résistant jusqu'à 1 000 °C en continu, permet des formes complexes sans fissures grâce à la découpe laser.</p>
+      <div class="mat-subtitle">Isolation thermique</div>
+      <div class="mat-desc">Parfait pour les applications haute température où la stabilité dimensionnelle et la résistance sont essentielles.</div>
       <ul class="mat-specs">
-        <li class="mat-spec">Température de service : jusqu'à 1 000 °C+</li>
-        <li class="mat-spec">Résistance à la compression élevée (MPa)</li>
+        <li class="mat-spec">1 000 °C+</li>
         <li class="mat-spec">Faible absorption d'humidité</li>
-        <li class="mat-spec">Formes complexes sur mesure</li>
+        <li class="mat-spec">Découpe de formes complexes</li>
       </ul>
       <a href="materiaux.html" class="btn-mat">Voir le matériau →</a>
     </div>
 
-    <!-- Néoprène -->
     <div class="mat-card" data-reveal data-reveal-delay="3">
+      <div class="mat-card-image" style="background-image:url('img/lasercut-industry.jpeg');"></div>
       <span class="mat-badge">03 — Joints & étanchéité</span>
       <div class="mat-name">Néoprène CloseCells</div>
-      <div class="mat-subtitle">Joints et garnitures</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Idéal pour la fabrication de joints d'étanchéité sur mesure (gaskets). Découpe nette et précise pour des applications industrielles nécessitant souplesse et résistance.</p>
+      <div class="mat-subtitle">Joints sur mesure</div>
+      <div class="mat-desc">Découpe laser précise pour gaskets et garnitures destinées aux environnements industriels exigeants.</div>
       <ul class="mat-specs">
-        <li class="mat-spec">Résistance aux solvants et huiles</li>
-        <li class="mat-spec">Excellente durabilité mécanique</li>
-        <li class="mat-spec">Découpe sans outil ni matrice</li>
+        <li class="mat-spec">Résistant aux huiles</li>
+        <li class="mat-spec">Souplesse durable</li>
+        <li class="mat-spec">Sans matrice</li>
       </ul>
       <a href="materiaux.html" class="btn-mat">Voir le matériau →</a>
     </div>
 
-    <!-- Silicone -->
-    <div class="mat-card" data-reveal data-reveal-delay="1">
+    <div class="mat-card" data-reveal data-reveal-delay="4">
+      <div class="mat-card-image" style="background-image:url('img/lasercut-industry.jpeg');"></div>
       <span class="mat-badge">04 — Haute température</span>
       <div class="mat-name">Silicone</div>
-      <div class="mat-subtitle">Gris ou Rouge</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Pièces silicone découpées au laser pour applications à haute température. Disponible en versions grise ou rouge selon les spécifications de résistance thermique requises.</p>
+      <div class="mat-subtitle">Élastomère résistant</div>
+      <div class="mat-desc">Pièces silicone découpées au laser pour applications thermiques, avec une finition régulière et sans effilochage.</div>
       <ul class="mat-specs">
-        <li class="mat-spec">Résistance aux températures extrêmes</li>
-        <li class="mat-spec">Souplesse et durabilité conservées</li>
-        <li class="mat-spec">Tolérance de coupe serrée</li>
+        <li class="mat-spec">Résistance extrême</li>
+        <li class="mat-spec">Souplesse conservée</li>
+        <li class="mat-spec">Découpe fine</li>
       </ul>
       <a href="materiaux.html" class="btn-mat">Voir le matériau →</a>
-    </div>
-
-    <!-- Polyuréthane -->
-    <div class="mat-card" data-reveal data-reveal-delay="2">
-      <span class="mat-badge">05 — Protection</span>
-      <div class="mat-name">Polyuréthane Hydrofuge</div>
-      <div class="mat-subtitle">Pellicule protectrice</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Pellicule protectrice auto-réparatrice et hydrofuge, découpée selon des géométries spéciales. Utilisée dans les applications nécessitant une protection de surface durable.</p>
-      <ul class="mat-specs">
-        <li class="mat-spec">Propriétés auto-réparatrices</li>
-        <li class="mat-spec">Résistance à l'eau et à l'humidité</li>
-        <li class="mat-spec">Découpe spéciale sur mesure</li>
-      </ul>
-      <a href="materiaux.html" class="btn-mat">Voir le matériau →</a>
-    </div>
-
-    <!-- Étiquettes -->
-    <div class="mat-card" data-reveal data-reveal-delay="3">
-      <span class="mat-badge">06 — Marquage industriel</span>
-      <div class="mat-name">Étiquettes industrielles</div>
-      <div class="mat-subtitle">Lexam · Vynil · Métalisées</div>
-      <hr class="mat-divider">
-      <p class="mat-desc">Étiquettes Lexam et Vynil laminées (mat/gloss), étiquettes métallisées pour bornes (Terminals). Découpe de précision pour identification de composants électroniques.</p>
-      <ul class="mat-specs">
-        <li class="mat-spec">Finition mat ou gloss disponible</li>
-        <li class="mat-spec">Étiquettes métallisées pour terminaux</li>
-        <li class="mat-spec">Petites et grandes séries</li>
-      </ul>
-      <a href="materiaux.html" class="btn-mat">Voir le matériau →</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY P&P -->
-<section class="why">
-  <div class="section-eyebrow" data-reveal>Pourquoi P&P</div>
-  <h2 class="section-title" data-reveal data-reveal-delay="1">Un service aussi précis<br>que notre découpe.</h2>
-  <div class="why-grid">
-    <div class="why-item" data-reveal data-reveal-delay="1">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M16.9 16.9l2.1 2.1M4.9 19.1l2.1-2.1M16.9 7.1l2.1-2.1"/></svg>
-      </div>
-      <div class="why-stat">±10 μm</div>
-      <div class="why-stat-label">Tolérance garantie</div>
-      <div class="why-title">Précision extrême</div>
-      <p class="why-desc">Nos systèmes laser CNC atteignent des tolérances jusqu'à ±10 micromètres — impossible à atteindre avec les méthodes de découpe mécanique traditionnelles.</p>
-    </div>
-    <div class="why-item" data-reveal data-reveal-delay="2">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="why-stat">Direct</div>
-      <div class="why-stat-label">Accès au spécialiste</div>
-      <div class="why-title">Service personnalisé</div>
-      <p class="why-desc">Vous parlez directement à Pierre-Jean, le spécialiste. Pas d'intermédiaires — un accompagnement technique réel, de la conception à la livraison.</p>
-    </div>
-    <div class="why-item" data-reveal data-reveal-delay="3">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-      </div>
-      <div class="why-stat">0 $</div>
-      <div class="why-stat-label">Frais d'outillage</div>
-      <div class="why-title">Sans frais d'outillage</div>
-      <p class="why-desc">Aucune matrice physique nécessaire. Idéal pour les prototypes et les petites séries — envoyez votre fichier DXF, SVG ou AI et nous nous occupons du reste.</p>
     </div>
   </div>
 </section>
@@ -450,56 +183,6 @@
   </div>
 </section>
 
-<!-- FORMATS ACCEPTÉS -->
-<section class="formats">
-  <div class="formats-left" data-reveal="left">
-    <div class="section-eyebrow">Formats de fichiers</div>
-    <h2 class="section-title">Préparez vos<br>fichiers correctement.</h2>
-    <p style="font-size:14px;color:var(--muted);line-height:1.75;font-weight:300;margin-top:20px;max-width:400px;">
-      Un fichier bien préparé garantit des pièces conformes dès la première découpe. Consultez notre guide complet pour les règles de dessin.
-    </p>
-    <a href="guide.html" class="btn-green" style="margin-top:28px;display:inline-block;">Voir le guide de conception →</a>
-  </div>
-  <div class="formats-right" data-reveal="right">
-    <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey-lt);font-weight:500;margin-bottom:12px;">Formats acceptés</p>
-    <div class="formats-tags">
-      <span class="format-tag highlight">DXF</span>
-      <span class="format-tag highlight">SVG</span>
-      <span class="format-tag highlight">AI</span>
-      <span class="format-tag">PDF</span>
-      <span class="format-tag">DWG</span>
-    </div>
-    <div class="formats-rules">
-      <div class="format-rule"><span class="rule-dot"></span><span><strong>Traits de coupe :</strong> Rouge pur (RVB 255, 0, 0). Noir pour la gravure.</span></div>
-      <div class="format-rule"><span class="rule-dot"></span><span><strong>Lignes fermées :</strong> Tous les contours doivent être des chemins fermés, sans intersection.</span></div>
-      <div class="format-rule"><span class="rule-dot"></span><span><strong>Épaisseur de trait :</strong> Utilisez la plus fine possible (hairline) — l'épaisseur n'affecte pas la coupe.</span></div>
-      <div class="format-rule"><span class="rule-dot"></span><span><strong>Logiciels recommandés :</strong> Inkscape (gratuit), Adobe Illustrator, AutoCAD.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PULL QUOTE -->
-<div class="break-quote">
-  <blockquote data-reveal="left">Un problème technique complexe mérite <em>une solution précise</em> —<br>pas une approximation.</blockquote>
-  <div class="break-quote-right">
-    <div class="break-quote-badge"><span>P&P</span></div>
-    <span>Colorismédia Inc.</span>
-  </div>
-</div>
-
-<!-- INDUSTRIES BAND -->
-<div class="industries-band">
-  <span class="industries-band-label">Secteurs desservis</span>
-  <div class="industry-tags">
-    <span class="industry-tag">Énergie & Électricité</span>
-    <span class="industry-tag">Aéronautique & Défense</span>
-    <span class="industry-tag">Automobile & Véhicules électriques</span>
-    <span class="industry-tag">Électronique industrielle</span>
-    <span class="industry-tag">Fabricants de transformateurs</span>
-    <span class="industry-tag">Moteurs & Générateurs</span>
-  </div>
-</div>
-
 <!-- CTA BAND -->
 <div class="cta-band">
   <div data-reveal="left">
@@ -514,7 +197,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo-link">
-        <div class="footer-logo-badge"><span>P&P</span></div>
+        <img src="img/rgb_P&PLOGOS.png" alt="P&amp;P Colorismédia logo">
         <div>
           <span class="footer-logo-text">Colorismédia Inc.</span>
           <span class="footer-logo-sub">Découpe Laser Spécialisée</span>

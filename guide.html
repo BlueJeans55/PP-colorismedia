@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide de conception — P&P Colorismédia</title>
+<meta name="description" content="Guide de conception pour la découpe laser de matériaux isolants. Formats de fichiers, règles de conception, épaisseurs compatibles et processus de commande.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
+    <div>
+      <span class="nav-logo-text">Colorismédia</span>
+      <span class="nav-logo-sub">Découpe Laser</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="materiaux.html">Matériaux</a>
+    <a href="nomex.html">Avantages Nomex</a>
+    <a href="guide.html" class="active" aria-current="page">Guide de conception</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html" class="nav-cta">Demande de soumission →</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="materiaux.html">Matériaux</a>
+  <a href="nomex.html">Avantages Nomex</a>
+  <a href="guide.html" class="active" aria-current="page">Guide de conception</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html" class="nav-cta">Demande de soumission →</a>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-eyebrow">Guide de conception</div>
+  <h1>Concevez vos pièces pour la découpe laser <span class="accent">avec confiance.</span></h1>
+  <p class="page-hero-sub">Formats de fichiers, règles de conception, épaisseurs compatibles et erreurs courantes à éviter — tout ce qu'il faut pour envoyer un fichier prêt à découper.</p>
+</section>
+
+<!-- ── STATS BAND ────────────────────────────────────────── -->
+<div class="stats">
+  <div class="stat-item">
+    <span class="stat-number">±0,1 mm</span>
+    <span class="stat-label">Tolérance standard</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">0,05–6 mm</span>
+    <span class="stat-label">Plage d'épaisseur</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">PDF · DXF · AI</span>
+    <span class="stat-label">Formats acceptés</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">24 h</span>
+    <span class="stat-label">Délai de devis garanti</span>
+  </div>
+</div>
+
+<!-- ── FORMATS ACCEPTÉS ──────────────────────────────────── -->
+<section class="formats">
+  <div class="formats-left">
+    <div class="section-eyebrow" data-reveal>Fichiers</div>
+    <h2 class="section-title" data-reveal data-reveal-delay="1">Formats<br>acceptés.</h2>
+    <div class="formats-tags" data-reveal data-reveal-delay="2">
+      <span class="format-tag highlight">DXF</span>
+      <span class="format-tag highlight">PDF</span>
+      <span class="format-tag highlight">AI</span>
+      <span class="format-tag">DWG</span>
+      <span class="format-tag">SVG</span>
+      <span class="format-tag">CDR</span>
+    </div>
+  </div>
+  <div class="formats-right" data-reveal data-reveal-delay="2">
+    <p style="font-size:15px;color:var(--grey);line-height:1.75;font-weight:300;margin-bottom:24px;">Nous travaillons exclusivement avec des <strong style="color:var(--black);font-weight:600;">fichiers vectoriels</strong>. Les images raster (JPG, PNG, BMP) ne peuvent pas être utilisées directement pour la découpe laser.</p>
+    <div class="formats-rules">
+      <div class="format-rule">
+        <span class="rule-dot"></span>
+        <span><strong>Contours fermés</strong> — Tous les tracés de coupe doivent former des boucles fermées. Un contour ouvert entraîne une découpe incomplète.</span>
+      </div>
+      <div class="format-rule">
+        <span class="rule-dot"></span>
+        <span><strong>Échelle 1:1</strong> — Envoyez toujours votre fichier à taille réelle. Précisez les unités utilisées (mm ou pouces) dans votre message.</span>
+      </div>
+      <div class="format-rule">
+        <span class="rule-dot"></span>
+        <span><strong>Calques distincts</strong> — Séparez les lignes de coupe, de gravure et la géométrie de construction sur des calques distincts.</span>
+      </div>
+      <div class="format-rule">
+        <span class="rule-dot"></span>
+        <span><strong>Pas de géométrie parasite</strong> — Supprimez les lignes de construction, les points isolés et les contours en double avant d'envoyer.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RÈGLES DE CONCEPTION ──────────────────────────────── -->
+<section class="guide-rules">
+  <div class="section-eyebrow" data-reveal>Règles de conception</div>
+  <h2 class="section-title" data-reveal data-reveal-delay="1">Six règles pour une découpe réussie du premier coup.</h2>
+  <div class="guide-rules-grid">
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="1">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Format</div>
+      <div class="guide-rule-spec">Vectoriel</div>
+      <div class="guide-rule-title">Fichiers vectoriels uniquement</div>
+      <p class="guide-rule-desc">Envoyez vos fichiers en PDF, DXF, AI ou DWG. Les images raster (JPG, PNG) ne peuvent pas être découpées directement — tous les contours doivent être des tracés vectoriels.</p>
+    </div>
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="2">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><line x1="5" y1="8" x2="19" y2="8"/><line x1="5" y1="16" x2="19" y2="16"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Ponts & nervures</div>
+      <div class="guide-rule-spec">≥ 0,8 mm</div>
+      <div class="guide-rule-title">Largeur minimale des ponts</div>
+      <p class="guide-rule-desc">Tout pont, nervure ou paroi entre deux découpes doit mesurer au minimum 0,8 mm. En dessous de cette valeur, les pièces fragiles risquent de se déformer ou de se casser lors du dégagement.</p>
+    </div>
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="3">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Trous & perçages</div>
+      <div class="guide-rule-spec">≥ épaisseur</div>
+      <div class="guide-rule-title">Diamètre minimal des trous</div>
+      <p class="guide-rule-desc">Le diamètre d'un trou doit être au moins égal à l'épaisseur du matériau, avec un minimum absolu de 0,5 mm. Les trous trop petits ne peuvent être découpés proprement et risquent de brûler.</p>
+    </div>
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="1">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Marges</div>
+      <div class="guide-rule-spec">≥ 3 mm</div>
+      <div class="guide-rule-title">Marge depuis les bords</div>
+      <p class="guide-rule-desc">Conservez une marge d'au moins 3 mm entre le bord de votre pièce et les bords de la feuille de matériau. Les découpes trop proches du bord peuvent produire des irrégularités ou des brûlures.</p>
+    </div>
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="2">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Texte & gravure</div>
+      <div class="guide-rule-spec">≥ 3 mm</div>
+      <div class="guide-rule-title">Hauteur minimale des caractères</div>
+      <p class="guide-rule-desc">Pour une gravure ou un marquage lisible, utilisez une hauteur minimale de 3 mm par caractère. Évitez les polices légères ou très fines dont les traits seraient inférieurs à 0,3 mm.</p>
+    </div>
+
+    <div class="guide-rule-card" data-reveal data-reveal-delay="3">
+      <div class="guide-rule-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <div class="guide-rule-eyebrow">Échelle</div>
+      <div class="guide-rule-spec">1:1</div>
+      <div class="guide-rule-title">Fichier à l'échelle réelle</div>
+      <p class="guide-rule-desc">Transmettez toujours votre fichier à l'échelle 1:1 (taille réelle). Précisez les unités (mm ou pouces). Un fichier mal mis à l'échelle est la cause d'erreur la plus fréquente et la plus coûteuse.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ÉPAISSEURS COMPATIBLES ────────────────────────────── -->
+<section class="guide-table-section">
+  <div class="section-eyebrow" data-reveal>Compatibilité matériaux</div>
+  <h2 class="section-title" data-reveal data-reveal-delay="1">Épaisseurs disponibles par matériau.</h2>
+  <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.75;max-width:600px;margin-top:16px;" data-reveal data-reveal-delay="2">Ces plages couvrent les configurations les plus courantes. Pour une épaisseur hors plage ou un matériau non listé, contactez-nous — nous pouvons souvent sourcer sur mesure.</p>
+  <div class="guide-table-wrap" data-reveal data-reveal-delay="3">
+    <table class="guide-table">
+      <thead>
+        <tr>
+          <th>Matériau</th>
+          <th>Épaisseur min.</th>
+          <th>Épaisseur max.</th>
+          <th>Application typique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Nomex 410
+            <a href="nomex.html" style="display:block;font-size:11px;color:var(--green);margin-top:4px;font-weight:500;">Voir la fiche →</a>
+          </td>
+          <td><span class="guide-table-tag">0,05 mm</span></td>
+          <td><span class="guide-table-tag">1,5 mm</span></td>
+          <td>Joints fins, isolation électrique haute tension, barrières d'arc</td>
+        </tr>
+        <tr>
+          <td>
+            Hitex 020 Gris
+            <a href="hitex.html" style="display:block;font-size:11px;color:var(--green);margin-top:4px;font-weight:500;">Voir la fiche →</a>
+          </td>
+          <td><span class="guide-table-tag">0,5 mm</span></td>
+          <td><span class="guide-table-tag">3 mm</span></td>
+          <td>Plaques isolantes rigides, entretoises, pièces de précision</td>
+        </tr>
+        <tr>
+          <td>
+            Néoprène CloseCells
+            <a href="neoprene.html" style="display:block;font-size:11px;color:var(--green);margin-top:4px;font-weight:500;">Voir la fiche →</a>
+          </td>
+          <td><span class="guide-table-tag">1 mm</span></td>
+          <td><span class="guide-table-tag">6 mm</span></td>
+          <td>Joints d'étanchéité, garnitures, amortisseurs de vibration</td>
+        </tr>
+        <tr>
+          <td>
+            Silicone haute température
+            <a href="silicone.html" style="display:block;font-size:11px;color:var(--green);margin-top:4px;font-weight:500;">Voir la fiche →</a>
+          </td>
+          <td><span class="guide-table-tag">0,5 mm</span></td>
+          <td><span class="guide-table-tag">6 mm</span></td>
+          <td>Isolants souples, joints haute température, pièces flexibles</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── PROCESSUS DE COMMANDE ─────────────────────────────── -->
+<section class="process">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow" data-reveal>Processus</div>
+      <h2 class="section-title" data-reveal data-reveal-delay="1">De votre fichier à la pièce livrée.</h2>
+    </div>
+    <p class="section-header-right" data-reveal data-reveal-delay="2">Pas de minimum de commande, pas de coûts d'outillage cachés. Prototypes comme petites séries, nous traitons les deux.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step" data-reveal data-reveal-delay="1">
+      <div class="step-num">01</div>
+      <div class="step-title">Préparez votre fichier</div>
+      <p class="step-desc">Fichier vectoriel (PDF, DXF, AI), échelle 1:1, contours fermés. Indiquez le matériau souhaité, l'épaisseur et la quantité.</p>
+    </div>
+    <div class="process-step" data-reveal data-reveal-delay="2">
+      <div class="step-num">02</div>
+      <div class="step-title">Envoyez votre commande</div>
+      <p class="step-desc">Via notre formulaire de contact ou par email à <a href="mailto:petp@bellnet.ca" style="color:var(--indigo);">petp@bellnet.ca</a>. Prototypes et petites séries acceptés sans minimum.</p>
+    </div>
+    <div class="process-step" data-reveal data-reveal-delay="3">
+      <div class="step-num">03</div>
+      <div class="step-title">Recevez votre devis</div>
+      <p class="step-desc">Réponse sous 24 heures en jours ouvrables. Prix transparents, sans frais cachés. Nous vérifions la découpabilité de votre fichier avant production.</p>
+    </div>
+    <div class="process-step" data-reveal data-reveal-delay="4">
+      <div class="step-num">04</div>
+      <div class="step-title">Production et livraison</div>
+      <p class="step-desc">Découpe laser de précision, contrôle qualité, emballage soigné. Expédition depuis Montréal — délais rapides, livraison fiable partout au Canada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── À FAIRE / À ÉVITER ─────────────────────────────────── -->
+<section class="guide-dodonts">
+  <div class="section-eyebrow" data-reveal>Récapitulatif</div>
+  <h2 class="section-title" data-reveal data-reveal-delay="1">Checklist avant d'envoyer votre fichier.</h2>
+  <div class="guide-dodonts-grid">
+
+    <div class="guide-dodonts-col do" data-reveal data-reveal-delay="1">
+      <div class="guide-dodonts-heading">
+        <span class="guide-dodonts-dot"></span>
+        À faire
+      </div>
+      <ul class="guide-dodonts-list">
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Fichiers vectoriels — PDF, DXF, AI ou DWG
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Contours fermés et tracés propres, sans points flottants
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Échelle 1:1 avec unités clairement précisées (mm ou po)
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Calques distincts pour lignes de coupe, gravure et construction
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Ponts ≥ 0,8 mm et trous ≥ épaisseur du matériau
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Marge ≥ 3 mm depuis les bords de la feuille
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✓</span>
+          Indiquer le matériau, l'épaisseur et la quantité souhaitée
+        </li>
+      </ul>
+    </div>
+
+    <div class="guide-dodonts-col dont" data-reveal data-reveal-delay="2">
+      <div class="guide-dodonts-heading">
+        <span class="guide-dodonts-dot"></span>
+        À éviter
+      </div>
+      <ul class="guide-dodonts-list">
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Images raster — JPG, PNG, BMP, TIFF non acceptés comme tracés de coupe
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Lignes doubles ou superposées — elles produisent des passes laser en double
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Géométrie de construction non supprimée dans le fichier final
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Trous de diamètre inférieur à 0,5 mm ou à l'épaisseur du matériau
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Marge inférieure à 3 mm depuis les bords de la feuille
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Fichier sans indication d'unités ou d'échelle
+        </li>
+        <li class="guide-dodonts-item">
+          <span class="guide-dodonts-marker">✕</span>
+          Contours ouverts — un tracé non fermé donne une découpe incomplète
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA BAND ────────────────────────────────────────────── -->
+<div class="cta-band">
+  <div>
+    <h2>Votre fichier est prêt ? Envoyez-nous votre commande.</h2>
+    <p>Devis gratuit sous 24 h, aucun minimum de commande, délais rapides depuis Montréal.</p>
+  </div>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+    <a href="contact.html" class="btn-primary">Demander un devis gratuit</a>
+    <a href="tel:5149393369" class="btn-secondary">514 939-3369</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
+        <div>
+          <span class="footer-logo-text">Colorismédia Inc.</span>
+          <span class="footer-logo-sub">Découpe Laser Spécialisée</span>
+        </div>
+      </a>
+      <p class="footer-tagline">Service de découpe laser de précision pour l'isolation industrielle — Montréal, Québec, depuis 2009.</p>
+      <div class="footer-contact">
+        <a href="tel:5149393369">514 939-3369</a>
+        <a href="mailto:petp@bellnet.ca">petp@bellnet.ca</a>
+        <span style="font-size:12px;color:rgba(255,255,255,0.25);">Montréal, QC H2N 1H7</span>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <strong>Navigation</strong>
+        <a href="index.html">Accueil</a>
+        <a href="materiaux.html">Matériaux</a>
+        <a href="nomex.html">Avantages Nomex</a>
+        <a href="guide.html">Guide de conception</a>
+        <a href="a-propos.html">À propos</a>
+      </div>
+      <div class="footer-col">
+        <strong>Matériaux</strong>
+        <a href="nomex.html">Nomex 410</a>
+        <a href="hitex.html">Hitex 020 Gris</a>
+        <a href="neoprene.html">Néoprène</a>
+        <a href="silicone.html">Silicone</a>
+      </div>
+      <div class="footer-col">
+        <strong>Contact</strong>
+        <a href="contact.html">Demande de soumission</a>
+        <a href="contact.html">Nous joindre</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Colorismédia. Tous droits réservés.</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
