@@ -1231,7 +1231,11 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
   .materials { padding: 56px 20px; }
   .materials-grid { grid-template-columns: 1fr; }
   .process { padding: 56px 20px; }
-  .process-steps { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .process-step { padding: 20px 16px; gap: 10px; min-height: 0; border-radius: 16px; }
+  .step-num { width: 40px; height: 40px; border-radius: 12px; font-size: 16px; }
+  .step-title { font-size: 14px; }
+  .step-desc { display: none; }
   .formats { padding: 44px 20px; gap: 32px; }
   .why { padding: 40px 20px 20px; }
   .why-inner { padding: 28px 20px 28px; gap: 20px; }
