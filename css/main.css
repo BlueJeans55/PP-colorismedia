@@ -405,7 +405,7 @@ a { text-decoration: none; color: inherit; }
 .mat-card .mat-name { margin-top: 14px; }
 .mat-card .mat-desc { margin: 16px 0 22px; }
 .mat-card .mat-specs { margin-bottom: 24px; }
-.mat-card .btn-mat { margin-bottom: 24px; }
+.mat-card .btn-mat { margin: 0 24px 24px; }
 .mat-card.featured::after {
   background: var(--green-lt); opacity: 1;
 }
@@ -1436,7 +1436,7 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
   .mat-card .mat-subtitle { margin-bottom: 0; }
   .mat-card .mat-desc { display: none; }
   .mat-card .mat-specs { display: none; }
-  .mat-card .btn-mat { padding: 10px 20px; font-size: 12px; margin-bottom: 14px; margin-top: 12px; }
+  .mat-card .btn-mat { padding: 10px 20px; font-size: 12px; margin: 12px 20px 14px; }
   .footer-top { padding: 40px 20px 28px; flex-direction: column; }
   .footer-bottom { padding: 16px 20px; flex-direction: column; text-align: center; }
   .footer-nav { gap: 28px; }
