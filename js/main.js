@@ -9,12 +9,25 @@ if (btn && drawer) {
     drawer.classList.toggle('open');
     document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
   });
-  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  const closeDrawer = () => {
     btn.classList.remove('open');
     drawer.classList.remove('open');
     document.body.style.overflow = '';
-  }));
+  };
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 }
+
+// Drawer accordion (mobile sub-menus)
+document.querySelectorAll('.drawer-toggle-btn').forEach(toggleBtn => {
+  toggleBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const item = toggleBtn.closest('.drawer-item');
+    const subId = toggleBtn.dataset.sub;
+    const sub = document.getElementById(subId);
+    item.classList.toggle('open');
+    if (sub) sub.classList.toggle('open');
+  });
+});
 
 // Scroll reveal
 const revealObs = new IntersectionObserver((entries) => {

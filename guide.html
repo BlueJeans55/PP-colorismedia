@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="img/rgb_P&PLOGOS.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#2B5C3A">
+<link rel="preload" as="image" href="img/lasercut-industry.jpeg" fetchpriority="high">
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -19,12 +20,44 @@
   <a class="nav-logo" href="index.html">
     <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
     <div>
-      <span class="nav-logo-text">Colorismédia</span>
-      <span class="nav-logo-sub">Découpe Laser</span>
+      <span class="nav-logo-text">P&amp;P Découpes</span>
+      <span class="nav-logo-sub">Service de découpe spécialisée</span>
     </div>
   </a>
   <div class="nav-links">
-    <a href="materiaux.html">Matériaux</a>
+    <div class="nav-item">
+    <a href="services.html">Services <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown">
+      <a href="services.html">Découpe emport-pièce</a>
+      <a href="services.html">Découpe CNC</a>
+      <a href="services.html">Découpe laser</a>
+    </div>
+  </div>
+    <div class="nav-item">
+    <a href="materiaux.html">Matériaux <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown">
+      <a href="nomex.html">Nomex 410</a>
+      <a href="hitex.html">Hitex 020 Gris</a>
+      <a href="neoprene.html">Néoprène</a>
+      <a href="silicone.html">Silicone</a>
+      <div class="nav-dropdown-sep"></div>
+      <a href="materiaux.html" class="nav-dropdown-all">Voir tous les matériaux →</a>
+    </div>
+  </div>
+    <div class="nav-item">
+    <a href="industries.html">Industries <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown nav-dropdown-industries">
+      <a href="transformateurs.html">Transformateurs &amp; Inductances</a>
+      <a href="moteurs-electriques.html">Moteurs électriques</a>
+      <a href="electronique-puissance.html">Électronique de puissance</a>
+      <a href="vehicules-electriques.html">Véhicules électriques</a>
+      <a href="tableaux-electriques.html">Tableaux électriques</a>
+      <a href="eclairage-led.html">Éclairage LED</a>
+      <a href="aeronautique.html">Aéronautique &amp; Défense</a>
+      <div class="nav-dropdown-sep"></div>
+      <a href="industries.html" class="nav-dropdown-all">Voir toutes les industries →</a>
+    </div>
+  </div>
     <a href="nomex.html">Avantages Nomex</a>
     <a href="guide.html" class="active" aria-current="page">Guide de conception</a>
     <a href="a-propos.html">À propos</a>
@@ -33,7 +66,46 @@
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="nav-drawer">
-  <a href="materiaux.html">Matériaux</a>
+  <div class="drawer-item">
+    <a href="services.html">Services</a>
+    <button class="drawer-toggle-btn" data-sub="sub-services" aria-label="Voir les services">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-services">
+    <a href="services.html">Découpe emport-pièce</a>
+    <a href="services.html">Découpe CNC</a>
+    <a href="services.html">Découpe laser</a>
+  </div>
+  <div class="drawer-item">
+    <a href="materiaux.html">Matériaux</a>
+    <button class="drawer-toggle-btn" data-sub="sub-materiaux" aria-label="Voir les matériaux">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-materiaux">
+    <a href="nomex.html">Nomex 410</a>
+    <a href="hitex.html">Hitex 020 Gris</a>
+    <a href="neoprene.html">Néoprène</a>
+    <a href="silicone.html">Silicone</a>
+    <a href="fishpaper.html">Fishpaper</a>
+    <a href="mylar.html">Mylar®</a>
+    <a href="kapton.html">Kapton®</a>
+    <a href="lexan.html">Lexan®</a>
+    <a href="formex.html">Formex®</a>
+    <a href="tpu.html">TPU</a>
+    <a href="materiaux.html" class="drawer-sub-all">Voir tous les matériaux →</a>
+  </div>
+    <div class="drawer-item">
+    <a href="industries.html">Industries</a>
+    <button class="drawer-toggle-btn" data-sub="sub-industries" aria-label="Voir les industries">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-industries">
+    <a href="transformateurs.html">Transformateurs &amp; Inductances</a>
+    <a href="moteurs-electriques.html">Moteurs électriques</a>
+    <a href="electronique-puissance.html">Électronique de puissance</a>
+    <a href="vehicules-electriques.html">Véhicules électriques</a>
+    <a href="tableaux-electriques.html">Tableaux électriques</a>
+    <a href="eclairage-led.html">Éclairage LED</a>
+    <a href="aeronautique.html">Aéronautique &amp; Défense</a>
+    <a href="industries.html" class="drawer-sub-all">Voir toutes les industries →</a>
+  </div>
   <a href="nomex.html">Avantages Nomex</a>
   <a href="guide.html" class="active" aria-current="page">Guide de conception</a>
   <a href="a-propos.html">À propos</a>
@@ -58,7 +130,7 @@
     <span class="stat-label">Plage d'épaisseur</span>
   </div>
   <div class="stat-item">
-    <span class="stat-number">PDF · DXF · AI</span>
+    <span class="stat-number">PDF · DXF · AI · EPS</span>
     <span class="stat-label">Formats acceptés</span>
   </div>
   <div class="stat-item">
@@ -76,6 +148,7 @@
       <span class="format-tag highlight">DXF</span>
       <span class="format-tag highlight">PDF</span>
       <span class="format-tag highlight">AI</span>
+      <span class="format-tag highlight">EPS</span>
       <span class="format-tag">DWG</span>
       <span class="format-tag">SVG</span>
       <span class="format-tag">CDR</span>
@@ -117,7 +190,7 @@
       <div class="guide-rule-eyebrow">Format</div>
       <div class="guide-rule-spec">Vectoriel</div>
       <div class="guide-rule-title">Fichiers vectoriels uniquement</div>
-      <p class="guide-rule-desc">Envoyez vos fichiers en PDF, DXF, AI ou DWG. Les images raster (JPG, PNG) ne peuvent pas être découpées directement — tous les contours doivent être des tracés vectoriels.</p>
+      <p class="guide-rule-desc">Envoyez vos fichiers en PDF, DXF, AI, EPS ou DWG. Les images raster (JPG, PNG) ne peuvent pas être découpées directement — tous les contours doivent être des tracés vectoriels.</p>
     </div>
 
     <div class="guide-rule-card" data-reveal data-reveal-delay="2">
@@ -243,7 +316,7 @@
     <div class="process-step" data-reveal data-reveal-delay="1">
       <div class="step-num">01</div>
       <div class="step-title">Préparez votre fichier</div>
-      <p class="step-desc">Fichier vectoriel (PDF, DXF, AI), échelle 1:1, contours fermés. Indiquez le matériau souhaité, l'épaisseur et la quantité.</p>
+      <p class="step-desc">Fichier vectoriel (PDF, DXF, AI, EPS), échelle 1:1, contours fermés. Indiquez le matériau souhaité, l'épaisseur et la quantité.</p>
     </div>
     <div class="process-step" data-reveal data-reveal-delay="2">
       <div class="step-num">02</div>
@@ -277,7 +350,7 @@
       <ul class="guide-dodonts-list">
         <li class="guide-dodonts-item">
           <span class="guide-dodonts-marker">✓</span>
-          Fichiers vectoriels — PDF, DXF, AI ou DWG
+          Fichiers vectoriels — PDF, DXF, AI, EPS ou DWG
         </li>
         <li class="guide-dodonts-item">
           <span class="guide-dodonts-marker">✓</span>
@@ -360,13 +433,13 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo-link">
-        <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
+        <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo" loading="lazy">
         <div>
           <span class="footer-logo-text">Colorismédia Inc.</span>
           <span class="footer-logo-sub">Découpe Laser Spécialisée</span>
         </div>
       </a>
-      <p class="footer-tagline">Service de découpe laser de précision pour l'isolation industrielle — Montréal, Québec, depuis 2009.</p>
+      <p class="footer-tagline">Service de découpe spécialisée pour l'isolation industrielle — Montréal, Québec, depuis 2009.</p>
       <div class="footer-contact">
         <a href="tel:5149393369">514 939-3369</a>
         <a href="mailto:petp@bellnet.ca">petp@bellnet.ca</a>
@@ -377,17 +450,23 @@
       <div class="footer-col">
         <strong>Navigation</strong>
         <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
         <a href="materiaux.html">Matériaux</a>
+    <a href="industries.html">Industries</a>
         <a href="nomex.html">Avantages Nomex</a>
         <a href="guide.html">Guide de conception</a>
         <a href="a-propos.html">À propos</a>
       </div>
+      
       <div class="footer-col">
-        <strong>Matériaux</strong>
-        <a href="nomex.html">Nomex 410</a>
-        <a href="hitex.html">Hitex 020 Gris</a>
-        <a href="neoprene.html">Néoprène</a>
-        <a href="silicone.html">Silicone</a>
+        <strong>Industries</strong>
+        <a href="transformateurs.html">Transformateurs</a>
+        <a href="moteurs-electriques.html">Moteurs électriques</a>
+        <a href="electronique-puissance.html">Électronique de puissance</a>
+        <a href="vehicules-electriques.html">Véhicules électriques</a>
+        <a href="tableaux-electriques.html">Tableaux électriques</a>
+        <a href="eclairage-led.html">Éclairage LED</a>
+        <a href="aeronautique.html">Aéronautique</a>
       </div>
       <div class="footer-col">
         <strong>Contact</strong>

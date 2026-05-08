@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="img/rgb_P&PLOGOS.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#2B5C3A">
+<link rel="preload" as="image" href="img/lasercut-industry.jpeg" fetchpriority="high">
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -19,12 +20,44 @@
   <a class="nav-logo" href="index.html">
     <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
     <div>
-      <span class="nav-logo-text">Colorismédia</span>
-      <span class="nav-logo-sub">Découpe Laser</span>
+      <span class="nav-logo-text">P&amp;P Découpes</span>
+      <span class="nav-logo-sub">Service de découpe spécialisée</span>
     </div>
   </a>
   <div class="nav-links">
-    <a href="materiaux.html" class="active" aria-current="page">Matériaux</a>
+    <div class="nav-item">
+    <a href="services.html">Services <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown">
+      <a href="services.html">Découpe emport-pièce</a>
+      <a href="services.html">Découpe CNC</a>
+      <a href="services.html">Découpe laser</a>
+    </div>
+  </div>
+    <div class="nav-item">
+    <a href="materiaux.html" class="active" aria-current="page">Matériaux <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown">
+      <a href="nomex.html">Nomex 410</a>
+      <a href="hitex.html">Hitex 020 Gris</a>
+      <a href="neoprene.html">Néoprène</a>
+      <a href="silicone.html">Silicone</a>
+      <div class="nav-dropdown-sep"></div>
+      <a href="materiaux.html" class="nav-dropdown-all">Voir tous les matériaux →</a>
+    </div>
+  </div>
+    <div class="nav-item">
+    <a href="industries.html">Industries <span class="nav-chevron">▾</span></a>
+    <div class="nav-dropdown nav-dropdown-industries">
+      <a href="transformateurs.html">Transformateurs &amp; Inductances</a>
+      <a href="moteurs-electriques.html">Moteurs électriques</a>
+      <a href="electronique-puissance.html">Électronique de puissance</a>
+      <a href="vehicules-electriques.html">Véhicules électriques</a>
+      <a href="tableaux-electriques.html">Tableaux électriques</a>
+      <a href="eclairage-led.html">Éclairage LED</a>
+      <a href="aeronautique.html">Aéronautique &amp; Défense</a>
+      <div class="nav-dropdown-sep"></div>
+      <a href="industries.html" class="nav-dropdown-all">Voir toutes les industries →</a>
+    </div>
+  </div>
     <a href="nomex.html">Avantages Nomex</a>
     <a href="guide.html">Guide de conception</a>
     <a href="a-propos.html">À propos</a>
@@ -33,7 +66,46 @@
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="nav-drawer">
-  <a href="materiaux.html" class="active" aria-current="page">Matériaux</a>
+  <div class="drawer-item">
+    <a href="services.html">Services</a>
+    <button class="drawer-toggle-btn" data-sub="sub-services" aria-label="Voir les services">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-services">
+    <a href="services.html">Découpe emport-pièce</a>
+    <a href="services.html">Découpe CNC</a>
+    <a href="services.html">Découpe laser</a>
+  </div>
+  <div class="drawer-item">
+    <a href="materiaux.html">Matériaux</a>
+    <button class="drawer-toggle-btn" data-sub="sub-materiaux" aria-label="Voir les matériaux">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-materiaux">
+    <a href="nomex.html">Nomex 410</a>
+    <a href="hitex.html">Hitex 020 Gris</a>
+    <a href="neoprene.html">Néoprène</a>
+    <a href="silicone.html">Silicone</a>
+    <a href="fishpaper.html">Fishpaper</a>
+    <a href="mylar.html">Mylar®</a>
+    <a href="kapton.html">Kapton®</a>
+    <a href="lexan.html">Lexan®</a>
+    <a href="formex.html">Formex®</a>
+    <a href="tpu.html">TPU</a>
+    <a href="materiaux.html" class="drawer-sub-all">Voir tous les matériaux →</a>
+  </div>
+    <div class="drawer-item">
+    <a href="industries.html">Industries</a>
+    <button class="drawer-toggle-btn" data-sub="sub-industries" aria-label="Voir les industries">▾</button>
+  </div>
+  <div class="drawer-sub-links" id="sub-industries">
+    <a href="transformateurs.html">Transformateurs &amp; Inductances</a>
+    <a href="moteurs-electriques.html">Moteurs électriques</a>
+    <a href="electronique-puissance.html">Électronique de puissance</a>
+    <a href="vehicules-electriques.html">Véhicules électriques</a>
+    <a href="tableaux-electriques.html">Tableaux électriques</a>
+    <a href="eclairage-led.html">Éclairage LED</a>
+    <a href="aeronautique.html">Aéronautique &amp; Défense</a>
+    <a href="industries.html" class="drawer-sub-all">Voir toutes les industries →</a>
+  </div>
   <a href="nomex.html">Avantages Nomex</a>
   <a href="guide.html">Guide de conception</a>
   <a href="a-propos.html">À propos</a>
@@ -107,6 +179,7 @@
         <h3 class="mat-row-name">Nomex 410</h3>
         <p class="mat-row-subtitle">Papier aramide thermosetting · Beige</p>
         <p class="mat-row-desc">Le standard de l'industrie électrique depuis les années 1960. Fabriqué à partir de fibres aramides, il offre la meilleure résistance diélectrique de tous nos matériaux — 500 V/mil — tout en résistant aux températures jusqu'à 220°C. Certifié UL 94V-0 et conforme MIL-I-24768/28.</p>
+        <div class="mat-row-pitch">Résistance thermique classe R (220°C) et ignifuge.<span class="mat-row-pitch-target">Fabricants de transformateurs et véhicules électriques</span></div>
         <div class="mat-row-specs">
           <div class="mat-row-spec">
             <span class="mat-row-spec-label">Temp. max</span>
@@ -135,6 +208,7 @@
         <h3 class="mat-row-name">Hitex 020 Gris</h3>
         <p class="mat-row-subtitle">Thermosetting phénolique · Gris</p>
         <p class="mat-row-desc">Isolant structurel thermosetting fabriqué sous pression et chaleur à partir de fibres phénoliques. Sa très faible absorption d'eau (&lt; 0,3 %) et ses propriétés mécaniques stables en font le choix de référence pour les pièces d'isolation rigide nécessitant précision dimensionnelle et durabilité dans le temps.</p>
+        <div class="mat-row-pitch">Rigidité mécanique et isolation économique.<span class="mat-row-pitch-target">Ateliers de bobinage et fabricants de moteurs</span></div>
         <div class="mat-row-specs">
           <div class="mat-row-spec">
             <span class="mat-row-spec-label">Épaisseurs</span>
@@ -191,6 +265,7 @@
         <h3 class="mat-row-name">Silicone haute température</h3>
         <p class="mat-row-subtitle">Polymère silicone · Rouge ou transparent</p>
         <p class="mat-row-desc">Polymère synthétique alliant souplesse extrême et résistance thermique jusqu'à 220°C. Non toxique et biocompatible dans certaines applications, il excelle dans les environnements industriels exigeants où une pièce doit rester flexible sous chaleur continue tout en assurant l'isolation électrique et l'étanchéité.</p>
+        <div class="mat-row-pitch">Étanchéité IP67 + isolation + conduction thermique.<span class="mat-row-pitch-target">Électronique de puissance et éclairage LED</span></div>
         <div class="mat-row-specs">
           <div class="mat-row-spec">
             <span class="mat-row-spec-label">Temp. de service</span>
@@ -211,6 +286,113 @@
 
   </div>
 </div>
+
+<!-- ── MATÉRIAUX SECONDAIRES ────────────────────────────────── -->
+<section class="mat-secondary">
+  <div class="section-eyebrow" data-reveal>Catalogue complet</div>
+  <h2 class="section-title" data-reveal data-reveal-delay="1">Autres matériaux disponibles.</h2>
+  <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.75;max-width:620px;margin-top:16px;" data-reveal data-reveal-delay="2">Ces matériaux sont disponibles sur demande selon votre application. Contactez-nous avec vos spécifications — nous sélectionnons le procédé de découpe optimal pour chacun.</p>
+
+  <div class="mat-secondary-grid">
+
+    <!-- Fishpaper -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="1">
+      <span class="mat-badge">Isolation électrique</span>
+      <div class="mat-secondary-name">Fishpaper</div>
+      <div class="mat-secondary-desc">Carton vulcanisé fibreux, économique et robuste, utilisé pour l'isolation de bobines, transformateurs et bornes électriques. Excellente rigidité diélectrique pour son coût.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">Diélectrique élevé</span>
+        <span class="mat-secondary-spec">Économique</span>
+        <span class="mat-secondary-spec">Bonne rigidité</span>
+      </div>
+      <a href="fishpaper.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+    <!-- Mylar -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="2">
+      <span class="mat-badge">Film polyester</span>
+      <div class="mat-secondary-name">Mylar<sup>®</sup></div>
+      <div class="mat-secondary-desc">Film PET biaxialement orienté — isolation fine et dimensionnellement stable pour condensateurs, câbles plats et pièces d'électronique. Faible absorption d'humidité et résistance chimique.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">Très fin (6–500 µm)</span>
+        <span class="mat-secondary-spec">Stable dimensionnellement</span>
+        <span class="mat-secondary-spec">Résistant à l'humidité</span>
+      </div>
+      <a href="mylar.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+    <!-- Kapton -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="3">
+      <span class="mat-badge">Film polyimide</span>
+      <div class="mat-secondary-name">Kapton<sup>®</sup></div>
+      <div class="mat-secondary-desc">Film polyimide haute performance de DuPont — performance exceptionnelle de −269 °C à +400 °C. Standard de l'industrie aérospatiale pour les circuits flexibles et l'isolation critique.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">−269 → +400 °C</span>
+        <span class="mat-secondary-spec">Aérospatiale</span>
+        <span class="mat-secondary-spec">Ultra-fin</span>
+      </div>
+      <a href="kapton.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+    <!-- Lexan -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="1">
+      <span class="mat-badge">Polycarbonate</span>
+      <div class="mat-secondary-name">Lexan<sup>®</sup></div>
+      <div class="mat-secondary-desc">Polycarbonate transparent haute résistance aux chocs — idéal pour les protections, capots, panneaux de contrôle et pièces structurelles nécessitant transparence et solidité.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">Haute résistance aux chocs</span>
+        <span class="mat-secondary-spec">Transparent</span>
+        <span class="mat-secondary-spec">Découpe CNC/laser</span>
+      </div>
+      <a href="lexan.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+    <!-- Formex -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="2">
+      <span class="mat-badge">Isolation structurelle</span>
+      <div class="mat-secondary-name">Formex<sup>®</sup></div>
+      <div class="mat-secondary-desc">Feuille de polypropylène isolante et légère, résistante aux flammes UL 94 V-0. Utilisée comme isolation de boîtiers électroniques, séparateurs de batteries et protection interne d'appareils.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">UL 94 V-0</span>
+        <span class="mat-secondary-spec">Léger</span>
+        <span class="mat-secondary-spec">Résistant aux flammes</span>
+      </div>
+      <a href="formex.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+    <!-- TPU -->
+    <div class="mat-secondary-card" data-reveal data-reveal-delay="3">
+      <span class="mat-badge">Élastomère thermoplastique</span>
+      <div class="mat-secondary-name">TPU</div>
+      <div class="mat-secondary-desc">Polyuréthane thermoplastique — combine la souplesse du caoutchouc et la résistance des plastiques techniques. Excellent pour joints d'étanchéité souples, protections antiabrasion et pièces flexibles de précision.</div>
+      <div class="mat-secondary-specs">
+        <span class="mat-secondary-spec">Très souple</span>
+        <span class="mat-secondary-spec">Résistant à l'abrasion</span>
+        <span class="mat-secondary-spec">Bonne tenue chimique</span>
+      </div>
+      <a href="tpu.html" class="mat-secondary-link">Voir la fiche</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOURNISSEURS ──────────────────────────────────────── -->
+<section class="fournisseurs-section">
+  <div class="section-eyebrow" data-reveal>Approvisionnement</div>
+  <h2 class="section-title" data-reveal data-reveal-delay="1">Nos fournisseurs de matière.</h2>
+  <p class="fournisseurs-sub" data-reveal data-reveal-delay="2">Nous nous approvisionnons auprès de distributeurs et fabricants reconnus pour garantir la traçabilité, la constance des propriétés et la disponibilité des matériaux.</p>
+  <div class="fournisseurs-grid" data-reveal data-reveal-delay="3">
+    <div class="fournisseur-card">Paisley</div>
+    <div class="fournisseur-card">Mouser Electronics</div>
+    <div class="fournisseur-card">Digi-Key</div>
+    <div class="fournisseur-card">Remathec</div>
+    <div class="fournisseur-card">McMaster-Carr</div>
+    <div class="fournisseur-card">Alfagomma</div>
+    <div class="fournisseur-card">Grainger Canada</div>
+    <div class="fournisseur-card">Sabic / PolymerShape Montréal</div>
+    <div class="fournisseur-card">Piedmont Plastics</div>
+  </div>
+</section>
 
 <!-- ── COMPARISON TABLE ───────────────────────────────────── -->
 <section class="mat-compare">
@@ -296,13 +478,13 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo-link">
-        <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo">
+        <img src="img/rgb_P&PLOGOS.png" alt="P&P Colorismédia logo" loading="lazy">
         <div>
           <span class="footer-logo-text">Colorismédia Inc.</span>
           <span class="footer-logo-sub">Découpe Laser Spécialisée</span>
         </div>
       </a>
-      <p class="footer-tagline">Service de découpe laser de précision pour l'isolation industrielle — Montréal, Québec, depuis 2009.</p>
+      <p class="footer-tagline">Service de découpe spécialisée pour l'isolation industrielle — Montréal, Québec, depuis 2009.</p>
       <div class="footer-contact">
         <a href="tel:5149393369">514 939-3369</a>
         <a href="mailto:petp@bellnet.ca">petp@bellnet.ca</a>
@@ -313,17 +495,23 @@
       <div class="footer-col">
         <strong>Navigation</strong>
         <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
         <a href="materiaux.html">Matériaux</a>
+    <a href="industries.html">Industries</a>
         <a href="nomex.html">Avantages Nomex</a>
         <a href="guide.html">Guide de conception</a>
         <a href="a-propos.html">À propos</a>
       </div>
+      
       <div class="footer-col">
-        <strong>Matériaux</strong>
-        <a href="nomex.html">Nomex 410</a>
-        <a href="hitex.html">Hitex 020 Gris</a>
-        <a href="neoprene.html">Néoprène</a>
-        <a href="silicone.html">Silicone</a>
+        <strong>Industries</strong>
+        <a href="transformateurs.html">Transformateurs</a>
+        <a href="moteurs-electriques.html">Moteurs électriques</a>
+        <a href="electronique-puissance.html">Électronique de puissance</a>
+        <a href="vehicules-electriques.html">Véhicules électriques</a>
+        <a href="tableaux-electriques.html">Tableaux électriques</a>
+        <a href="eclairage-led.html">Éclairage LED</a>
+        <a href="aeronautique.html">Aéronautique</a>
       </div>
       <div class="footer-col">
         <strong>Contact</strong>
