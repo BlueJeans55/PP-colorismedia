@@ -42,7 +42,7 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo img { height: 36px; width: auto; }
+.nav-logo img { height: 48px; width: auto; }
 .nav-logo-badge {
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--green); border: 2px solid rgba(255,255,255,0.15);
@@ -55,19 +55,19 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-logo-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14px; letter-spacing: 0.3px; font-weight: 700;
+  font-size: 15px; letter-spacing: 0.3px; font-weight: 700;
   color: var(--white); line-height: 1.2;
 }
 .nav-logo-sub {
-  font-size: 9px; font-weight: 400; letter-spacing: 0.5px;
-  color: rgba(255,255,255,0.35); text-transform: uppercase;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.65); text-transform: uppercase;
   display: block;
 }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-links a {
-  font-size: 12px; letter-spacing: 0.2px;
-  color: rgba(255,255,255,0.5);
-  font-weight: 400; transition: color .2s;
+  font-size: 13px; letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500; transition: color .2s;
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--white); }
@@ -193,9 +193,9 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-links .nav-dropdown a {
   display: block !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  color: rgba(255,255,255,0.55) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.72) !important;
   padding: 8px 12px !important;
   border-radius: 8px;
   transition: background .15s, color .15s !important;
@@ -1923,4 +1923,48 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
 @media (max-width: 480px) {
   .fournisseurs-section { padding: 48px 20px; }
   .fournisseur-card { padding: 12px 20px; font-size: 13px; }
+}
+
+/* ── Print / PDF ────────────────────────────────────────── */
+@media print {
+  /* Redefine colour variables so every rule that uses them goes dark automatically */
+  :root {
+    --grey:     #111;
+    --grey-lt:  #333;
+    --muted:    #222;
+    --black:    #111;
+    --off-white:#fff;
+    --light:    #f5f5f5;
+    --border:   #bbb;
+  }
+
+  /* Hide chrome, images, buttons */
+  .site-nav, .nav-drawer, footer, .cta-band,
+  .hero-actions, .btn-primary, .btn-outline-light, .btn-mat,
+  .mat-card-cta, .breadcrumb-nav,
+  img, .mat-card-image, .hero-image-panel, .page-hero-bg,
+  .hero-logo-stamp { display: none !important; }
+
+  /* Strip background images */
+  * { background-image: none !important; }
+
+  /* Force reveal elements visible */
+  [data-reveal], [data-reveal="left"], [data-reveal="right"] {
+    opacity: 1 !important; transform: none !important;
+  }
+
+  body { padding-top: 0; font-size: 14px; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Hero: dark band without image */
+  .hero { min-height: 0 !important; display: block !important; }
+  .hero-content { padding: 32px 48px !important; background: #111814 !important; }
+  .hero-content, .hero-content * { color: #fff !important; }
+  .hero-content .accent { color: #3A7A50 !important; }
+
+  /* Why band */
+  .why-inner { background: #2B5C3A !important; }
+  .why-inner * { color: #fff !important; }
+
+  section, .mat-intro, .mat-specs-table { page-break-inside: avoid; }
+  a { text-decoration: none; }
 }
