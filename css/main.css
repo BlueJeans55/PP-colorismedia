@@ -301,7 +301,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 800; line-height: 1; letter-spacing: -2px;
   color: var(--white); max-width: 700px;
 }
-.page-hero h1 .accent { color: var(--green-lt); }
+.page-hero h1 .accent { color: var(--indigo); }
 .page-hero-sub {
   font-size: 15px; color: rgba(255,255,255,0.45);
   max-width: 520px; line-height: 1.7; font-weight: 300;
@@ -349,7 +349,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--white); letter-spacing: -1.5px;
   max-width: 640px; margin-bottom: 28px;
 }
-.hero h1 .accent { color: var(--green-lt); }
+.hero h1 .accent { color: var(--indigo); }
 .hero-sub {
   font-size: 15px; color: rgba(255,255,255,0.45);
   line-height: 1.7; max-width: 440px; font-weight: 300;
@@ -1959,7 +1959,7 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
   .hero { min-height: 0 !important; display: block !important; }
   .hero-content { padding: 32px 48px !important; background: #111814 !important; }
   .hero-content, .hero-content * { color: #fff !important; }
-  .hero-content .accent { color: #3A7A50 !important; }
+  .hero-content .accent { color: #3440C4 !important; }
 
   /* Why band */
   .why-inner { background: #2B5C3A !important; }
