@@ -42,7 +42,7 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo img { height: 96px; width: auto; }
+.nav-logo img { height: 77px; width: auto; }
 .nav-logo-badge {
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--green); border: 2px solid rgba(255,255,255,0.15);
@@ -325,6 +325,7 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   gap: 0;
   position: relative;
+  overflow: hidden;
 }
 .hero-content::before {
   content: '';
@@ -1646,15 +1647,12 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
 /* B — Circular stamp badge pinned to hero bottom-right (+30%) */
 .hero-logo-stamp {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 260px; height: 260px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  display: flex; align-items: center; justify-content: center;
+  right: -80px; bottom: 48px;
+  width: 320px; height: auto;
+  opacity: 0.08;
+  pointer-events: none; user-select: none;
 }
-.hero-logo-stamp img { width: 160px; height: auto; opacity: 0.9; display: block; }
+.hero-logo-stamp img { width: 100%; height: auto; display: block; }
 
 /* C — Centered divider with logo before process section (2× size) */
 .section-logo-divider {
@@ -1675,8 +1673,7 @@ body.is-leaving { animation: pageFadeOut 0.25s ease forwards; }
 .cta-band > *:not(.cta-band-logo) { position: relative; z-index: 1; }
 
 @media (max-width: 1024px) {
-  .hero-logo-stamp { width: 180px; height: 180px; }
-  .hero-logo-stamp img { width: 110px; }
+  .hero-logo-stamp { width: 220px; right: -60px; }
   .section-logo-divider { padding: 24px 32px; }
 }
 @media (max-width: 640px) {
